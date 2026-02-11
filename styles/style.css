@@ -81,15 +81,12 @@
   font-family: var(--accent-font);
   font-size: 14px;
   text-transform: uppercase;
-  mix-blend-mode: hard-light;
-}
-
-.label {
   text-shadow:
     -1px 0 #fff,
     0 1px #fff,
     1px 0 #fff,
     0 -1px #fff;
+  mix-blend-mode: hard-light;
 }
 
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
@@ -282,10 +279,10 @@ dialog::backdrop {
 }
 
 dialog {
-  width: 353px;
+  width: var(--dialog-width);
   height: 191px;
   border: 2px solid #000;
-  padding: 28px 30px;
+  padding: 28px;
   background: #fff;
 }
 
@@ -395,4 +392,3 @@ dialog {
     margin-block-end: 6px;
   }
 }
-
