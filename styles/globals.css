@@ -21,7 +21,8 @@ h6,
 p,
 ul,
 ol,
-li {
+li,
+img {
   margin: 0;
   padding: 0;
 }
@@ -35,6 +36,8 @@ input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
+  padding: 0px;
+  margin: 0px;
 }
 
 ul,
