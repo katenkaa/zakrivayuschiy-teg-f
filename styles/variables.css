@@ -13,5 +13,7 @@
   --padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem)
     clamp(1rem, -1.3438rem + 10vw, 7.6563rem);
   --contour-color: #000;
+  --main-color: #000;
+  --main-bg-color: #fff;
   --animation-fill-color: red;
 }

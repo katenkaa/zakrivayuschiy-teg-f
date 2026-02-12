@@ -32,23 +32,23 @@
   flex-direction: column;
   align-items: center;
   margin: 100px 0px 95px 0px;
-  border: 2px solid #000;
+  border: 2px solid var(--main-color);
   padding: var(--padding);
   font-family: var(--accent-font);
-  background-color: #fff;
+  background-color: var(--main-bg-color);
   inline-size: var(--width);
 }
 
 .header__logo {
   margin-block-end: 20px;
-  color: #000;
+  color: var(--main-color);
   font-size: 65px;
   text-transform: uppercase;
   font-variation-settings: "wght" var(--text-weight);
 }
 
 .header__title {
-  color: #000;
+  color: var(--main-color);
   font-size: 23px;
   text-transform: uppercase;
   font-variation-settings: "wght" var(--text-weight);
@@ -63,8 +63,8 @@
 
 .content__card {
   width: var(--width);
-  border: 2px solid #000;
-  background-color: #fff;
+  border: 2px solid var(--main-color);
+  background-color: var(--main-bg-color);
 }
 
 .content__card-wrap {
@@ -77,51 +77,51 @@
   right: 25px;
   z-index: 1;
   opacity: 0.5;
-  color: #000;
+  color: var(--main-color);
   font-family: var(--accent-font);
   font-size: 14px;
   text-transform: uppercase;
   text-shadow:
-    -1px 0 #fff,
-    0 1px #fff,
-    1px 0 #fff,
-    0 -1px #fff;
+    -1px 0 var(--main-bg-color),
+    0 1px var(--main-bg-color),
+    1px 0 var(--main-bg-color),
+    0 -1px var(--main-bg-color);
   mix-blend-mode: hard-light;
 }
 
-@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+@supports ((text-stroke: 1px var(--main-bg-color)) or (-webkit-text-stroke: 1px var(--main-bg-color))) {
   p {
     text-shadow: none;
-    -webkit-text-stroke: 1px #fff;
-    text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px var(--main-bg-color);
+    text-stroke: 1px var(--main-bg-color);
   }
 }
 
 .content__card-title {
   padding: 4px 10px;
-  color: #000;
+  color: var(--main-color);
   font-family: var(--main-font);
   font-size: 18px;
   font-variation-settings: "wght" var(--title-weight);
 }
 
 .content__card-img {
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
+  border-top: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color);
   inline-size: 100%;
   aspect-ratio: 1 / 1;
 }
 
 .content__card-description {
   margin: 25px;
-  color: #000;
+  color: var(--main-color);
   font-size: 18px;
   line-height: 117%;
   font-variation-settings: "wght" 410;
 }
 
 .card__like-button {
-  border: 2px solid #000;
+  border: 2px solid var(--main-color);
   background-color: transparent;
   max-block-size: 37px;
 }
@@ -130,6 +130,7 @@
   position: relative;
   z-index: 3;
   font-family: var(--accent-font);
+  mix-blend-mode: difference;
 }
 
 .text-like {
@@ -155,7 +156,7 @@
 }
 
 .card__icon-button:focus-visible {
-  outline-color: #000;
+  outline-color: var(--main-color);
   outline-offset: -2px;
 }
 
@@ -194,8 +195,9 @@
   align-items: center;
   min-width: 130px;
   overflow: hidden;
+  color: var(--main-bg-color);
   font-family: var(--accent-font);
-  background-color: #fff;
+  background-color: var(--main-bg-color);
   transition:
     box-shadow 0.3s ease,
     transform 0.5s ease-in-out,
@@ -211,15 +213,16 @@
   width: 200%;
   height: 100%;
   overflow: hidden;
-  background-color: white;
+  background-color: var(--main-bg-color);
   transition: transform 0.5s ease-in-out;
   transform: translateX(-120%);
   mix-blend-mode: difference;
 }
 
 .button:hover {
-  color: white;
+  color: var(--main-bg-color);
 }
+
 
 .button:hover::before {
   transform: translateX(-20%);
@@ -230,13 +233,13 @@
   height: auto;
 }
 
-.button:hover .floppy {
+/* .button:hover .floppy {
   filter: invert(1);
   transition: filter 0.5s ease-in-out;
-}
+} */
 
 .button:focus {
-  box-shadow: 2px 2px 0 0 #000;
+  box-shadow: 2px 2px 0 0 var(--main-color);
 }
 
 .content__card-button {
@@ -269,30 +272,31 @@
   white-space: nowrap;
 }
 
-.floppy {
-  transition: color 0.5s ease-in-out;
+.button .floppy {
+  mix-blend-mode: difference;
 }
 
 dialog::backdrop {
   opacity: 0.75;
-  background: #000;
+  background: var(--main-color);
 }
 
 dialog {
   width: var(--dialog-width);
   height: 191px;
-  border: 2px solid #000;
+  border: 2px solid var(--main-color);
   padding: 28px;
-  background: #fff;
+  background: var(--main-bg-color);
 }
 
 .text-paste {
-  color: #000;
+  color: var(--main-color);
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
+  mix-blend-mode: normal;
 }
 
 .button-ok {
@@ -328,12 +332,12 @@ dialog {
 }
 
 .like-icon:hover .main-body {
-  fill: black;
+  fill: var(--main-color);
   transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon:hover .core {
-  fill: black;
+  fill: var(--main-color);
   transition: fill 0.3s linear;
 }
 
