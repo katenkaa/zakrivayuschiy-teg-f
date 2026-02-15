@@ -21,12 +21,16 @@
     </header>
     <main class="content">
       <article class="content__card">
-        <h3 class="content__card-title">
+        <h2 class="content__card-title">
           Фритрек и нулевой спринт: Подготовка к работе
-        </h3>
+        </h2>
         <div class="content__card-wrap">
-          <h3 class="label">&lt;/HTML&gt;</h3>
-          <img class="content__card-img" src="./images/image.png" />
+          <span class="label">&lt;/HTML&gt;</span>
+          <img
+            class="content__card-img"
+            src="./images/image.png"
+            alt="Вагончик"
+          />
         </div>
         <div class="content__card-description">
           Это было самое начало пути. На этом этапе важно было проникнуться
@@ -37,7 +41,7 @@
           Место для ваших воспоминаний о начале обучения.
         </div>
         <div class="content__card-button">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               width="39"
               height="36"
@@ -45,6 +49,7 @@
               viewBox="0 0 39 36"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <g class="heart">
                 <path
@@ -76,7 +81,7 @@
               />
             </svg>
           </button>
-          <button class="card__like-button button">
+          <button class="card__like-button button" type="button">
             <span class="button__text text-like">Like</span>
           </button>
         </div>
@@ -85,7 +90,11 @@
         <h3 class="content__card-title">1 спринт: Я — чистый лист</h3>
         <div class="content__card-wrap">
           <h3 class="label">&lt;/HTML&gt;</h3>
-          <img class="content__card-img img-blur" src="./images/image.png" />
+          <img
+            class="content__card-img img-blur"
+            src="./images/image.png"
+            alt="Вагончик"
+          />
         </div>
         <div class="content__card-description">
           На первых этапах мы работали со страхами и сомнениями, которые часто
@@ -149,6 +158,7 @@
           <img
             class="content__card-img img-grayscale"
             src="./images/image.png"
+            alt="Вагончик"
           />
         </div>
         <div class="content__card-description">
@@ -211,6 +221,7 @@
           <img
             class="content__card-img img-saturate"
             src="./images/image.png"
+            alt="Вагончик"
           />
         </div>
         <div class="content__card-description">
@@ -275,6 +286,7 @@
           <img
             class="content__card-img img-hue-rotate"
             src="./images/image.png"
+            alt="Вагончик"
           />
         </div>
         <div class="content__card-description">
@@ -336,7 +348,11 @@
         <h3 class="content__card-title">3 спринт: Обходные стратегии</h3>
         <div class="content__card-wrap">
           <h3 class="label">&lt;/HTML&gt;</h3>
-          <img class="content__card-img img-sepia" src="./images/image.png" />
+          <img
+            class="content__card-img img-sepia"
+            src="./images/image.png"
+            alt="Вагончик"
+          />
         </div>
         <div class="content__card-description">
           На этом курсе вы постоянно решали разные задачи. В какой-то момент вам
@@ -395,7 +411,11 @@
         <h3 class="content__card-title">3 спринт: Когда опускаются руки</h3>
         <div class="content__card-wrap">
           <h3 class="label">&lt;/HTML&gt;</h3>
-          <img class="content__card-img img-invert" src="./images/image.png" />
+          <img
+            class="content__card-img img-invert"
+            src="./images/image.png"
+            alt="Вагончик"
+          />
         </div>
         <div class="content__card-description">
           Во время учёбы часто возникает чувство, когда не знаешь, за что
@@ -455,7 +475,11 @@
         <h3 class="content__card-title">«Сейчас я здесь»</h3>
         <div class="content__card-wrap">
           <h3 class="label">&lt;/HTML&gt;</h3>
-          <img class="content__card-img img-filter" src="./images/image.png" />
+          <img
+            class="content__card-img img-filter"
+            src="./images/image.png"
+            alt="Вагончик"
+          />
         </div>
         <div class="content__card-description">
           Сейчас вы уже очень много знаете о вёрстке. Но это только начало.
@@ -521,18 +545,18 @@
         aria-controls="save"
       >
         <svg viewBox="0 0 39 39" width="39" height="39" class="floppy">
-          <use href="#floppy"></use>
+          <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text text-save">Сохранить на память</span>
       </button>
       <dialog id="save">
         <div class="dialog-save">
           <svg viewBox="0 0 39 39" width="39" height="39" class="floppy">
-            <use href="#floppy"></use>
+            <use href="./svg/floppy.svg#floppy"></use>
           </svg>
-          <span class="button__text text-paste"
-            >Вставьте дискету, чтобы продолжить</span
-          >
+          <p class="button__text text-paste">
+            Вставьте дискету, чтобы продолжить
+          </p>
         </div>
         <button
           type="button"
@@ -546,11 +570,3 @@
     <script src="./scripts/like.js"></script>
   </body>
 </html>
-
-<svg xmlns="http://www.w3.org/2000/svg">
-  <symbol id="floppy" stroke="currentColor" fill="currentColor">
-    <path
-      d="M0 0h3v3H0zM0 3h3v3H0zM0 6h3v3H0zM0 9h3v3H0zM0 12h3v3H0zM0 15h3v3H0zM0 18h3v3H0zM0 21h3v3H0zM0 24h3v3H0zM0 27h3v3H0zM0 30h3v3H0zM0 33h3v3H0zM0 36h3v3H0zM33 0v3h-3V0zM30 0v3h-3V0zM27 0v3h-3V0zM24 0v3h-3V0zM21 0v3h-3V0zM18 0v3h-3V0zM15 0v3h-3V0zM12 0v3H9V0zM9 0v3H6V0zM6 0v3H3V0zM36 3v3h-3V3zM9 6v3H6V6zM9 3v3H6V3zM9 9v3H6V9zM30 6v3h-3V6zM30 3v3h-3V3zM30 9v3h-3V9zM24 6v3h-3V6zM24 3v3h-3V3zM24 9v3h-3V9zM30 12v3h-3v-3zM27 12v3h-3v-3zM24 12v3h-3v-3zM21 12v3h-3v-3zM18 12v3h-3v-3zM15 12v3h-3v-3zM12 12v3H9v-3zM9 12v3H6v-3zM33 21v3h-3v-3zM30 21v3h-3v-3zM27 21v3h-3v-3zM24 21v3h-3v-3zM21 21v3h-3v-3zM18 21v3h-3v-3zM15 21v3h-3v-3zM12 21v3H9v-3zM9 21v3H6v-3zM33 24v3h-3v-3zM9 24v3H6v-3zM33 27v3h-3v-3zM9 27v3H6v-3zM33 30v3h-3v-3zM9 30v3H6v-3zM9 33v3H6v-3zM33 33v3h-3v-3zM36 36v3h-3v-3zM33 36v3h-3v-3zM30 36v3h-3v-3zM27 36v3h-3v-3zM24 36v3h-3v-3zM21 36v3h-3v-3zM18 36v3h-3v-3zM15 36v3h-3v-3zM12 36v3H9v-3zM9 36v3H6v-3zM6 36v3H3v-3zM39 39h-3v-3h3zM39 36h-3v-3h3zM39 33h-3v-3h3zM39 30h-3v-3h3zM39 27h-3v-3h3zM39 24h-3v-3h3zM39 21h-3v-3h3zM39 18h-3v-3h3zM39 15h-3v-3h3zM39 12h-3V9h3zM39 9h-3V6h3z"
-    />
-  </symbol>
-</svg>

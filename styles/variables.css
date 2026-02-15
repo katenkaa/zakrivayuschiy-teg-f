@@ -4,6 +4,7 @@
   --accent-font: "PressStart2P";
   --text-weight: 400;
   --title-weight: 715;
+  --title-size: clamp(3.063rem, 2.71rem + 1.502vi, 4.063rem);
   --dialog-width: clamp(21.313rem, 21.048rem + 1.127vi, 22.063rem);
   --background-image:
     repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px),
