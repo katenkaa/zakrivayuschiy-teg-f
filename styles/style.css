@@ -89,7 +89,10 @@
   mix-blend-mode: hard-light;
 }
 
-@supports ((text-stroke: 1px var(--main-bg-color)) or (-webkit-text-stroke: 1px var(--main-bg-color))) {
+@supports (
+  (text-stroke: 1px var(--main-bg-color)) or
+    (-webkit-text-stroke: 1px var(--main-bg-color))
+) {
   p {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--main-bg-color);
@@ -193,11 +196,11 @@
   justify-content: center;
   align-items: center;
   min-width: 130px;
+  border: 2px solid var(--main-color);
   overflow: hidden;
   color: var(--main-bg-color);
   font-family: var(--accent-font);
   background-color: var(--main-bg-color);
-  border: 2px solid var(--main-color);
   transition:
     box-shadow 0.3s ease,
     transform 0.5s ease-in-out,
@@ -208,14 +211,16 @@
   content: "";
   position: absolute;
   bottom: 0px;
+  left: 0;
   z-index: 2;
   display: block;
+  box-sizing: border-box;
   width: 200%;
   height: 100%;
   overflow: hidden;
   background-color: var(--main-bg-color);
   transition: transform 0.5s ease-in-out;
-  transform: translateX(-120%);
+  transform: translateX(-100%);
   mix-blend-mode: difference;
 }
 
@@ -223,10 +228,8 @@
   color: var(--main-bg-color);
 }
 
-
 .button:hover::before {
   transform: translateX(-20%);
-  transition: transform 0.5s ease-in-out;
 }
 
 .floppy_icon {
@@ -249,6 +252,7 @@
 .content__button-save {
   display: flex;
   gap: 8px;
+  margin-block-end: 100px;
   padding: 0 18px;
   max-block-size: 55px;
   max-inline-size: 335px;
@@ -292,6 +296,7 @@ dialog {
   line-height: 150%;
   text-transform: uppercase;
   mix-blend-mode: normal;
+  -webkit-text-stroke: 0;
 }
 
 .button-ok {
